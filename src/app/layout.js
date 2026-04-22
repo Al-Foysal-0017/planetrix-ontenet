@@ -1,14 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Kufi_Arabic } from 'next/font/google';
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+// Font configuration
+const notoKufi = Noto_Kufi_Arabic({
+  subsets: ['arabic'],
+  weight: ['400', '700'], // Proyojon onujayi weight add korun
+  variable: '--font-noto-kufi', // CSS variable hisabe use korar jonno
 });
 
 export const metadata = {
@@ -20,9 +17,9 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${notoKufi.variable} font-sans h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col" suppressHydrationWarning={true}>{children}</body>
     </html>
   );
 }
