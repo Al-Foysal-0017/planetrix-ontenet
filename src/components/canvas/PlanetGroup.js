@@ -83,9 +83,9 @@
 //               ref={(el) => (nameRefs.current[index] = el)} 
 //               className="absolute pointer-events-none select-none transition-all duration-300 ease-out"
 //             >
-//               <p className="bg-[linear-gradient(101.23deg,rgba(237,237,237,0.8)_24.07%,rgba(182,182,182,0.8)_96.8%)] bg-clip-text text-transparent  uppercase font-blac tracking-[0.2em] text-[clamp(0.6rem,3.5vw,3.5rem) text-[40px] whitespace-nowrap">
-//                 <span className="text-shadow-black">{planet.name}</span>
-//               </p>
+              // <p className="bg-[linear-gradient(101.23deg,rgba(237,237,237,0.8)_24.07%,rgba(182,182,182,0.8)_96.8%)] bg-clip-text text-transparent  uppercase font-blac tracking-[0.2em] text-[clamp(0.6rem,3.5vw,3.5rem) text-[40px] whitespace-nowrap">
+              //   <span className="text-shadow-black">{planet.name}</span>
+              // </p>
 //             </div>
 //           </Html>
 //         </group>
@@ -149,7 +149,7 @@ export default function PlanetGroup({ scrollYProgress }) {
       item.scale.setScalar(scale);
 
       if (item.children[0] && item.children[0].type === "Mesh") {
-        item.children[0].rotation.z -= delta * 0.2; 
+        item.children[0].rotation.z -= delta * 0.02; 
       }
 
       if (nameLabel) {
@@ -197,8 +197,8 @@ export default function PlanetGroup({ scrollYProgress }) {
 
           <Html center distanceFactor={10}>
             <div ref={(el) => (nameRefs.current[index] = el)} className="absolute pointer-events-none select-none transition-all duration-300">
-              <p className="bg-[linear-gradient(101.23deg,rgba(237,237,237,0.8)_24.07%,rgba(182,182,182,0.8)_96.8%)] bg-clip-text text-transparent uppercase font-black tracking-[0.2em] text-[clamp(0.6rem,3.5vw,3.5rem)] whitespace-nowrap">
-                {planet.name}
+              <p className="bg-[linear-gradient(101.23deg,rgba(237,237,237,0.8)_24.07%,rgba(182,182,182,0.8)_96.8%)] bg-clip-text text-transparent  uppercase font-blac tracking-[0.2em] text-[clamp(0.6rem,3.5vw,3.5rem) text-[40px] whitespace-nowrap">
+                <span className="text-shadow-black">{planet.name}</span>
               </p>
             </div>
           </Html>
