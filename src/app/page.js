@@ -40,7 +40,7 @@ export default function Home() {
   });
 
   useEffect(() => {
-    // ৫ সেকেন্ড পর নোটিফিকেশনটি চলে যাবে
+    // ১০ সেকেন্ড পর নোটিফিকেশনটি চলে যাবে
     const timer = setTimeout(() => {
       setShowNotification(false);
     }, 10000);
@@ -50,12 +50,11 @@ export default function Home() {
 
   return (
     <main ref={containerRef} className="relative h-[900vh]"
-    style={{
+      style={{
         background: 'linear-gradient(120.56deg, #1D2948 -2.28%, #141D33 21.31%, #0F1628 33.91%, #050A16 92.75%)',
         backgroundAttachment: 'fixed' 
       }}>
       <div className="sticky top-0 h-screen w-full overflow-hidden">
-        {/* এখানে আপনার অরিজিনাল scrollYProgress ই ব্যবহার করা হয়েছে */}
         <Scene scrollYProgress={scrollYProgress} />
       </div>
 
@@ -72,20 +71,21 @@ export default function Home() {
             {/* White Capsule Box */}
             <div className="bg-white px-4 py-8 rounded-full shadow-[0_0_25px_rgba(255,255,255,0.3)] flex flex-col items-center gap-4 border border-white/20">
               <span className="text-black font-bold tracking-[0.2em] uppercase text-[10px] [writing-mode:vertical-lr] rotate-180">
-                Scroll Down
+                Scroll Up
               </span>
 
+              {/* তীর চিহ্ন উপরের দিকে নির্দেশ করছে */}
               <motion.div
-                animate={{ y: [0, 8, 0] }}
+                animate={{ y: [0, -8, 0] }}
                 transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
                 className="text-black text-xl font-bold"
               >
-                ↓
+                ↑
               </motion.div>
             </div>
 
-            {/* Vertical Line for style */}
-            <div className="h-12 w-[1px] bg-gradient-to-b from-white to-transparent" />
+            {/* Vertical Line for style (এখন নিচ থেকে উপরের দিকে) */}
+            <div className="h-12 w-[1px] bg-gradient-to-t from-white to-transparent" />
           </motion.div>
         )}
       </AnimatePresence>
