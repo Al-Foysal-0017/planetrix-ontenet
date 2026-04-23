@@ -1,63 +1,6 @@
 // "use client"
 // import { useRef } from "react";
 // import { useFrame } from "@react-three/fiber";
-// import { Image } from "@react-three/drei";
-// import { PLANETS } from "@/constants/planetsData";
-// import * as THREE from "three";
-
-// export default function PlanetGroup({ scrollYProgress }) {
-//   const groupRef = useRef([]);
-
-//   useFrame(() => {
-//     PLANETS.forEach((_, index) => {
-//       const item = groupRef.current[index];
-//       if (!item) return;
-
-//       const progress = scrollYProgress.get();
-//       const center = index / (PLANETS.length - 1);
-      
-//       // Horizontal Slide Logic (100vw behavior)
-//       // [Start, Center, End] scroll positions
-//       const range = [center - 0.2, center, center + 0.2];
-      
-//       // X Position: -20 (bam) -> 0 (center) -> 20 (dan)
-//       const x = THREE.MathUtils.mapLinear(progress, center - 0.25, center + 0.25, 15, -15);
-      
-//       // Scale Logic: Center-e asle boro
-//       const distFromCenter = Math.abs(progress - center);
-//       const scale = THREE.MathUtils.lerp(3.8, 0.8, Math.min(distFromCenter * 5, 1));
-      
-//       // Z Position: Overlay control korar jonno
-//       const z = THREE.MathUtils.lerp(2, -5, Math.min(distFromCenter * 5, 1));
-
-//       item.position.set(x, 0, z);
-//       item.scale.set(scale, scale, 1);
-      
-//       // Opacity adjustment
-//       if (item.children[0]?.material) {
-//         item.children[0].material.opacity = THREE.MathUtils.lerp(1, 0.1, Math.min(distFromCenter * 6, 1));
-//         item.children[0].material.transparent = true;
-//       }
-//     });
-//   });
-
-//   return (
-//     <group>
-//       {PLANETS.map((planet, index) => (
-//         <group key={planet.id} ref={(el) => (groupRef.current[index] = el)}>
-//           <Image url={planet.img} transparent />
-//         </group>
-//       ))}
-//     </group>
-//   );
-// }
-
-
-
-
-// "use client"
-// import { useRef } from "react";
-// import { useFrame } from "@react-three/fiber";
 // import { Decal, useTexture } from "@react-three/drei";
 // import { PLANETS } from "@/constants/planetsData";
 // import * as THREE from "three";
@@ -118,14 +61,6 @@
 //     </group>
 //   );
 // }
-
-
-
-
-
-
-
-
 
 
 "use client"
@@ -213,8 +148,8 @@ export default function PlanetGroup({ scrollYProgress }) {
               ref={(el) => (nameRefs.current[index] = el)} 
               className="absolute pointer-events-none select-none transition-all duration-300 ease-out"
             >
-              <p className="text-white uppercase font-black tracking-[0.2em] text-[clamp(0.6rem,3vw,2.5rem)] whitespace-nowrap">
-                {planet.name}
+              <p className="bg-[linear-gradient(101.23deg,rgba(237,237,237,0.8)_24.07%,rgba(182,182,182,0.8)_96.8%)] bg-clip-text text-transparent  uppercase font-blac tracking-[0.2em] text-[clamp(0.6rem,3.5vw,3.5rem) text-[40px] whitespace-nowrap">
+                <span className="text-shadow-black">{planet.name}</span>
               </p>
             </div>
           </Html>

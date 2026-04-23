@@ -1,33 +1,3 @@
-// "use client"
-// import { Canvas } from "@react-three/fiber";
-// import { Suspense } from "react";
-// import PlanetGroup from "./PlanetGroup";
-// import PlanetInfo from "../ui/PlanetInfo";
-// import { Stars } from "@react-three/drei";
-
-// export default function Scene({ scrollYProgress }) {
-//   return (
-//     <>
-//       <PlanetInfo scrollYProgress={scrollYProgress} />
-//       <Canvas camera={{ position: [0, 0, 12], fov: 40 }}>
-//         <Suspense fallback={null}>
-//           <Stars radius={100} depth={50} count={3000} factor={4} fade speed={1} />
-//           <ambientLight intensity={1} />
-//           <PlanetGroup scrollYProgress={scrollYProgress} />
-//         </Suspense>
-//       </Canvas>
-//     </>
-//   );
-// }
-
-
-
-
-
-
-
-
-
 "use client"
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
