@@ -23,12 +23,6 @@
 //   );
 // }
 
-
-
-
-
-
-
 "use client"
 import { useRef, useState, useEffect } from "react";
 import { useScroll, motion, AnimatePresence } from "framer-motion";
