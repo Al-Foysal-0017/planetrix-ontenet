@@ -37,7 +37,6 @@ export default function PlanetInfo({ scrollYProgress }) {
               </h1>
 
               {/* Stats Grid - Fluid gap and padding */}
-              {/* <div className="pt-[2vh border grid grid-cols-4 gap-[2vw] w-full"> */}
               <div className="flex justify-between gap-[2vw] w-full">
                 <Stat label="Galaxy" value="Milky Way" />
                 <Stat label="Diameter" value={planet.diameter} />
@@ -55,11 +54,10 @@ export default function PlanetInfo({ scrollYProgress }) {
   );
 }
 
-// Space gulo soriye underscore (_) babohar kora hoyeche
+
 function Stat({ label, value }) {
   return (
     <div className="flex flex-col items-center text-center">
-      {/* Label - Space soriye underscore babohar kora hoyeche */}
       <p 
         style={{ color: "#BDC5E2" }} 
         className="mb-[0.5vh font-bold text-[clamp(0.6rem,2vw,2rem)] text-[30px  uppercase"
@@ -67,7 +65,6 @@ function Stat({ label, value }) {
         {label}
       </p>
       
-      {/* Value - clamp er bhetore space rakha jabe na */}
       <p className="text-[clamp(0.8rem,1.3vw,1.3rem)] text-[20px font-light tracking-wide">
         {value}
       </p>

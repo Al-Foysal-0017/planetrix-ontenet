@@ -6,7 +6,6 @@ export const PLANETS = [
   { id: 4, name: "MARS", diameter: "6,794 km", day: "24.7 Hours", temp: "-65°C", img: "/images/mars.png" },
   { id: 5, name: "JUPITER", diameter: "142,984 km", day: "9.9 Hours", temp: "-110°C", img: "/images/jupiter.png" },
   { id: 6, name: "SATURN", diameter: "120,536 km", day: "10.7 Hours", temp: "-140°C", img: "/images/venus.png" },
-  // { id: 6, name: "SATURN", diameter: "120,536 km", day: "10.7 Hours", temp: "-140°C", img: "/images/saturn.png" },
   { id: 7, name: "URANUS", diameter: "51,118 km", day: "17.2 Hours", temp: "-195°C", img: "/images/uranus.png" },
   { id: 8, name: "NEPTUNE", diameter: "49,528 km", day: "16.1 Hours", temp: "-200°C", img: "/images/neptune.png" },
 ];

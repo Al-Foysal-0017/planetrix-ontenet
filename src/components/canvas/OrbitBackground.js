@@ -7,14 +7,13 @@ import { TextureLoader } from 'three';
 export default function OrbitBackground() {
   const meshRef = useRef();
   
-  // Texture load korar logic
+  // Texture Load Logic
   const orbitTexture = useLoader(TextureLoader, '/images/orbit.png'); 
 
-  // Protiti frame-e rotation update korar logic
+  // Rotation Update Logic on All Frame
   useFrame((state, delta) => {
     if (meshRef.current) {
-      // delta babohar korle animation shob device-e ekoi speed-e cholbe
-      // 0.02 value-ti komale ba barale ghurar speed change hobe
+      // using delta for animation speed same for all device
       meshRef.current.rotation.z += delta * 0.02; 
     }
   });
@@ -23,15 +22,15 @@ export default function OrbitBackground() {
     <group>
       <mesh 
         ref={meshRef}
-        position={[0, -2, -15]} // Depth pishone set kora
+        position={[0, -2, -15]}
         rotation={[0, 0, 0]}   
       >
-        <planeGeometry args={[50, 28]} /> {/* Canvas size onujayi ektu boro kora hoyeche */}
+        <planeGeometry args={[50, 28]} /> {/* Canvas size set*/}
         
         <meshBasicMaterial 
           map={orbitTexture} 
           transparent={true} 
-          opacity={0.7} // Background e jate planet gulo ke distrub na kore tai halka kora
+          opacity={0.7} // Opacity for Background Image
           depthTest={false} 
         />
       </mesh>

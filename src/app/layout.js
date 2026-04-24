@@ -4,8 +4,8 @@ import "./globals.css";
 // Font configuration
 const notoKufi = Noto_Kufi_Arabic({
   subsets: ['arabic'],
-  weight: ['400', '700'], // Proyojon onujayi weight add korun
-  variable: '--font-noto-kufi', // CSS variable hisabe use korar jonno
+  weight: ['400', '700'], 
+  variable: '--font-noto-kufi', 
 });
 
 export const metadata = {
