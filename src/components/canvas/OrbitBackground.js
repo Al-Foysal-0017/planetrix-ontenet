@@ -15,7 +15,7 @@ export default function OrbitBackground() {
     if (meshRef.current) {
       // delta babohar korle animation shob device-e ekoi speed-e cholbe
       // 0.02 value-ti komale ba barale ghurar speed change hobe
-      meshRef.current.rotation.z += delta * 0.04; 
+      meshRef.current.rotation.z += delta * 0.02; 
     }
   });
 
@@ -31,7 +31,7 @@ export default function OrbitBackground() {
         <meshBasicMaterial 
           map={orbitTexture} 
           transparent={true} 
-          opacity={0.3} // Background e jate planet gulo ke distrub na kore tai halka kora
+          opacity={0.7} // Background e jate planet gulo ke distrub na kore tai halka kora
           depthTest={false} 
         />
       </mesh>
