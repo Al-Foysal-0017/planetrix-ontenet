@@ -18,7 +18,7 @@ export default function Loader() {
   }, []);
 
   return (
-    <div className="fixed inset-0 z-[999] flex items-center justify-center bg-[#050A16] overflow-hidden">
+    <div className="bg-[#050A16 fixed inset-0 z-[999] flex items-center justify-center overflow-hidden">
 
       {/* Glow */}
       <div className="absolute w-[500px] h-[500px] bg-blue-500/20 blur-[120px] rounded-full" />
@@ -72,3 +72,4 @@ export default function Loader() {
     </div>
   );
 }
+
