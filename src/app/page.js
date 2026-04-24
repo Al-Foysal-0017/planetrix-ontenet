@@ -25,7 +25,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowNotification(false);
-    }, 30000);
+    }, 60000);
 
     return () => clearTimeout(timer);
   }, []);
