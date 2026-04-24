@@ -126,7 +126,7 @@ export default function PlanetGroup({ scrollYProgress }) {
       // Positioning logic (আগের মতোই রাখা হয়েছে)
       const x = diff * -45; 
       const y = 0.5; 
-      const scale = THREE.MathUtils.lerp(2.2, 0.5, Math.min(distFromCenter * 4, 1));
+      const scale = THREE.MathUtils.lerp(2.2, 0.3, Math.min(distFromCenter * 4, 1));
       const z = THREE.MathUtils.lerp(0, -10, Math.min(distFromCenter * 4, 1));
 
       item.position.set(x, y, z);
