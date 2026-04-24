@@ -12,7 +12,7 @@ const Footer = () => {
       }} 
       className='w-full px-[5vw] py-[4vw]'
     >
-      <div className="w-full mx-auto flex justify-between items-center">
+      <div className="w-full mx-auto flex flex-col sm:flex-row justify-between items-center">
         
         {/* Left Side: Logo & Description */}
         <div className="max-w-[40vw]"> 
@@ -34,12 +34,12 @@ const Footer = () => {
         </div>
 
         {/* Right Side: Navigation Links */}
-        <div className="flex flex-col gap-[0.5vw] text-[clamp(0.7rem,1.1vw,1.2rem)] text-gray-300 tracking-[0.2em] cursor-pointer pointer-events-auto">
+        <div className="mt-2 sm:mt-0 flex flex-row sm:flex-col gap-[2.5vw] sm:gap-[0.5vw] text-[clamp(0.6rem,1.1vw,1.2rem)] text-gray-300 tracking-[0.2em] cursor-pointer pointer-events-auto">
           <p className="hover:text-white transition-colors duration-300">About Us</p>
           <p className="hover:text-white transition-colors duration-300">Blog</p>
           <p className="hover:text-white transition-colors duration-300">Career</p>
           <p className="hover:text-white transition-colors duration-300">FAQ</p>
-          <p className="hover:text-white transition-colors duration-300">Contact us</p>
+          <p className="hover:text-white transition-colors duration-300">Contact Us</p>
         </div>
 
       </div>
